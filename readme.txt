@@ -1,7 +1,7 @@
 === Algori Blogger ===
 
 Contributors: Kevin Bazira
-Tags: blog, two-columns, right-sidebar, accessibility-ready, custom-menu, custom-logo, featured-images, post-formats, theme-options, threaded-comments, translation-ready
+Tags: blog, two-columns, right-sidebar, custom-menu, custom-logo, featured-images, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 
 Requires at least: WP 4.5
 Tested up to: WP 4.9
