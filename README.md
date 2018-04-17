@@ -6,7 +6,7 @@ Tags: blog, two-columns, right-sidebar, custom-menu, custom-logo, featured-image
 
 Requires at least: WP 4.5
 * Tested up to: WP 4.9
-* Stable tag: 1.0.6
+* Stable tag: 1.0.7
 * License: GNU General Public License v2 or later
 * License URI: LICENSE
 
@@ -31,6 +31,9 @@ A Free Modern Personal Blog WordPress Theme with a clean and professional design
 Algori Blogger includes support for Infinite Scroll in Jetpack.
 
 # Changelog 
+
+= 1.0.7 - April 17 2018 =
+* Fixed Sidebar Styling
 
 = 1.0.6 - Feb 26 2018 =
 * Added Default Header Image

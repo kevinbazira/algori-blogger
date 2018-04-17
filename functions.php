@@ -67,12 +67,6 @@ if ( ! function_exists( 'algori_blogger_setup' ) ) :
 			'caption',
 		) );
 
-		// Set up the WordPress core custom background feature.
-		/*add_theme_support( 'custom-background', apply_filters( 'algori_blogger_custom_background_args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
-		) ) );*/
-
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
@@ -128,8 +122,6 @@ if ( ! function_exists( 'algori_blogger_setup' ) ) :
 		 * Display algori blogger custom comments format HTML Output.
 		 */
 		 function algori_blogger_comments_format($comment, $args, $depth){
-			 
-			  // $GLOBALS['comment'] = $comment;
 			  
 			  echo '<li '; comment_class('x'); echo' id="li-comment-'; comment_ID(); echo '">';
 				echo '<div class="user">';
@@ -271,7 +263,7 @@ function algori_blogger_widgets_init() {
 		'name'          => esc_html__( 'Sidebar', 'algori-blogger' ),
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Add widgets here.', 'algori-blogger' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'before_widget' => '<section id="%1$s" class="sidebox widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
