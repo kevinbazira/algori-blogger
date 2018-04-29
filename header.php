@@ -62,31 +62,38 @@
 	
 		<?php if ( get_header_image() && is_front_page() ): // Display header image if it exists ?>
 		<div class="offset"></div>
-		<div class="fullwidthbanner-container revolution">
-		<div class="fullwidthbanner">
-		  <ul>
-			<li data-transition="fade"> <?php the_header_image_tag(); ?>
-			  <div class="caption sfb white bold text-center" data-x="center" data-y="198" data-speed="900" data-start="800" data-easing="Sine.easeOut"><?php esc_html_e( 'Welcome to ', 'algori-blogger' ); echo bloginfo( 'name' ); ?></div>
-			 
-			  <?php 
-					// display site description if defined
-					$description = get_bloginfo( 'description', 'display' );
-					if ( $description || is_customize_preview() ):?>
-						<div class="caption sfb lite small text-center" data-x="center" data-y="258" data-speed="900" data-start="1500" data-easing="Sine.easeOut"><p class="site-description">
-							<?php /* translators: %s: Site Description */
-								printf( esc_html__(' %s', 'algori-blogger'), esc_attr($description) ); 
-							?></p></div>
-						<div class="caption sfb" data-x="center" data-y="353" data-speed="900" data-start="2200" data-easing="Sine.easeOut"><a href="#content" class="btn btn-large"><?php esc_html_e( 'Start Here', 'algori-blogger' ); ?></a></div>
-			  <?php else:?>
-						<div class="caption sfb" data-x="center" data-y="258" data-speed="900" data-start="2200" data-easing="Sine.easeOut"><a href="#content" class="btn btn-large"><?php esc_html_e( 'Start Here', 'algori-blogger' ); ?></a></div>
-			  <?php endif; ?>
-			</li>  
-		  </ul>
-		  <div class="tp-bannertimer tp-bottom"></div>
-		</div>
-		<!-- /.fullwidthbanner -->
-	  </div>
-	  <!-- /.fullwidthbanner-container -->
-	  <?php endif;?>
+		<div class="header-hero">
+          
+		  <span class="hero-media">
+			<?php the_header_image_tag(); ?>
+		  </span>
+		  
+		  <div class="hero-info">
+			
+			<h1 class="hero-title" ><?php esc_html_e( 'Welcome to ', 'algori-blogger' ); echo bloginfo( 'name' ); ?></h1>
+			
+			<?php 
+			// display site description if defined
+			$description = get_bloginfo( 'description', 'display' );
+			if ( $description || is_customize_preview() ):?>
+			
+			<p class="hero-description" >
+				<?php /* translators: %s: Site Description */
+					printf( esc_html__(' %s', 'algori-blogger'), esc_attr($description) ); 
+				?>
+			</p>
+			<?php else:?>
+			<br/><br/>
+			<?php endif; ?>
+			
+			<div class="hero-btn">
+			  <a href="#content" class="btn btn-large"><?php esc_html_e( 'Start Here', 'algori-blogger' ); ?></a>
+			</div>
+		  
+		  </div><!-- .hero-info -->
+		  
+		</div><!-- .header-hero -->
+		<?php endif;?>
+		
 	
 	<div id="content" class="site-content">

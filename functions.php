@@ -279,15 +279,9 @@ function algori_blogger_scripts() {
 	// Add CSS
 	wp_enqueue_style( 'algori-blogger-bootstrap', get_template_directory_uri() . '/style/css/bootstrap.css', array(), '20180131', 'all' );
 
-	wp_enqueue_style( 'algori-blogger-settings', get_template_directory_uri() . '/style/css/settings.css', array(), '20180131', 'all' );
-
 	wp_enqueue_style( 'algori-blogger-owl-carousel', get_template_directory_uri() . '/style/css/owl.carousel.css', array(), '20180131', 'all' );
 
 	wp_enqueue_style( 'algori-blogger-prettify', get_template_directory_uri() . '/style/js/google-code-prettify/prettify.css', array(), '20180131', 'all' );
-
-	wp_enqueue_style( 'algori-blogger-jquery-fancybox', get_template_directory_uri() . '/style/js/fancybox/jquery.fancybox.css', array(), '20180131', 'all' );
-
-	wp_enqueue_style( 'algori-blogger-jquery-fancybox-thumbs0ff5', get_template_directory_uri() . '/style/js/fancybox/helpers/jquery.fancybox-thumbs0ff5.css?v=1.0.2', array(), '20180131', 'all' );
 
 	wp_enqueue_style( 'algori-blogger-style', get_stylesheet_uri() );
 	
@@ -301,19 +295,13 @@ function algori_blogger_scripts() {
 	wp_enqueue_style( 'algori-font-awesome-fonts', get_template_directory_uri() . '/style/css/font-awesome.css', array(), '20180131', 'all' );
 	
 	//Add JavaScript
-	wp_enqueue_script( 'algori-blogger-jquery-min', get_template_directory_uri() . '/style/js/jquery.min.js', array(), '20180131', true );
+	wp_enqueue_script( 'jquery'); // load WP core-bundled jQuery
+	
+	wp_add_inline_script( 'jquery-core', '$ = jQuery;' );  // avoid '$ and jquery' conflict caused by WP core-bundled jQuery since it's old it uses 'jquery' yet algori-blogger scripts below use '$'
 	
 	wp_enqueue_script( 'algori-blogger-bootstrap-min', get_template_directory_uri() . '/style/js/bootstrap.min.js', array(), '20180131', true );
 
 	wp_enqueue_script( 'algori-blogger-twitter-bootstrap-hover-dropdown-min', get_template_directory_uri() . '/style/js/bootstrap-hover-dropdown.min.js', array(), '20180131', true );
-	
-	wp_enqueue_script( 'algori-blogger-jquery-themepunch-plugins-min', get_template_directory_uri() . '/style/js/jquery.themepunch.plugins.min.js', array(), '20180131', true );
-	
-	wp_enqueue_script( 'algori-blogger-jquery-themepunch-revolution-min', get_template_directory_uri() . '/style/js/jquery.themepunch.revolution.min.js', array(), '20180131', true );
-
-	wp_enqueue_script( 'algori-blogger-jquery-fancybox-pack', get_template_directory_uri() . '/style/js/jquery.fancybox.pack.js', array(), '20180131', true );
-	
-	wp_enqueue_script( 'algori-blogger-jquery-fancybox-thumbs0ff5', get_template_directory_uri() . '/style/js/fancybox/helpers/jquery.fancybox-thumbs0ff5.js?v=1.0.2', array(), '20180131', true );
 	
 	wp_enqueue_script( 'algori-blogger-isotope-min', get_template_directory_uri() . '/style/js/jquery.isotope.min.js', array(), '20180131', true );
 	
@@ -331,7 +319,7 @@ function algori_blogger_scripts() {
 	
 	wp_enqueue_script( 'algori-blogger-retina', get_template_directory_uri() . '/style/js/retina.js', array(), '20180131', true );
 	
-	wp_enqueue_script( 'algori-blogger-scripts', get_template_directory_uri() . '/style/js/scripts.js', array(), '20180131', true );
+	wp_enqueue_script( 'algori-blogger-scripts', get_template_directory_uri() . '/style/js/scripts.js', array(), '20180427', true );
 
 	wp_enqueue_script( 'algori-blogger-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

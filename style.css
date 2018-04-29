@@ -5,7 +5,7 @@ Theme URI: https://github.com/kevinbazira/algori-blogger
 Author: Kevin Bazira  
 Author URI: http://kevinbazira.com/
 Description: A Free Modern Personal Blog WordPress Theme with a clean and professional design that will be a great solution for sharing your creative vision, spreading your ideas, and creating a resource for others.
-Version: 1.0.7
+Version: 1.0.8
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.en.html
 Text Domain: algori-blogger
@@ -28,7 +28,7 @@ Use it to make something cool, have fun!
 # BUTTON
 # SOCIAL ICONS
 # HOME INTRO VIDEO
-# REVOLUTION SLIDER
+# HEADER HERO 
 # SERVICES TABS
 # TABS ON TOP
 # TESTIMONIALS
@@ -37,7 +37,6 @@ Use it to make something cool, have fun!
 # SERVICES ICONS
 # OWL CAROUSEL
 # CAPTION & OVERLAY
-# FANCYBOX
 # BLOG
 # PAGINATION
 # AUTHOR
@@ -1596,138 +1595,72 @@ hr {
 	}
 }
 /*-----------------------------------------------------------------------------------*/
-/*	REVOLUTION SLIDER   
+/*	HEADER HERO   
 /*-----------------------------------------------------------------------------------*/
-.fullwidthbanner-container {
-    width: 100% !important;
-    position: relative;
-    padding: 0;
-    max-height: 600px !important;
-    overflow: hidden !important;
+.header-hero{
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  height:50vw;
+  min-height:400px;
+  max-height:550px;
+  min-width:300px;
+  color:#eee;
 }
-.revolution {
-    background: #FFF;
+.hero-media img{
+  content:"";
+  width:100%;
+  /*height:100%;*/
+  position:absolute;
+  top:0;
+  left:0;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+    transform: translateZ(0);
+  background:#1B2030 top center no-repeat;
+  background-size:cover;
+  background-attachment:fixed;
+  animation: grow 60s  linear 10ms infinite;
+  transition:all 0.2s ease-in-out;
+  z-index:-2
 }
-.revolution ul {
-    visibility: hidden;
-    margin: 0;
-    list-style: none;
+.header-hero a{
+  color:#eee
 }
-.tp-caption.bold {
-    font-size: 35px;
-    line-height: 1;
-    font-weight: 800;
-    color: #F3F3F3;
+.hero-title{
+  color: #ffffff;
+  font-size: 35px;
 }
-.tp-caption.lite {
-    font-size: 28px;
-    line-height: 1;
-    color: #FFF;
-    font-weight: normal;
+.hero-description{
+  color: #ffffff;
+  font-size: 22px;
+  margin: 30px 0 30px 0;
 }
-.tp-caption.lite.small {
-    font-size: 22px;
-    line-height: 35px;
-    color: #FFFFFF;
-	font-weight: normal;
+.hero-info{
+  flex: 0 0 auto;
+  width:50%
 }
-.tp-caption.dark {
-    color: #000000;
+.hero-info{
+  width:100%;
+  padding:15% 10% 0 10%;
+  text-align:center;
+  text-shadow:0 2px 3px rgba(0,0,0,0.2)
 }
-.tp-caption.opacity-bg {
-    background: rgba(0,0,0,0.3);
-    color: #FFF !important;
-    padding: 10px 15px;
-    font-size: 30px;
-    line-height: 1;
-    font-weight: 800;
-    color: #F3F3F3;
+.hero-info h4, .hero-btn{
+  font-size:0.7em
 }
-.tp-caption a.btn {
-    color: #fff
+.hero-btn{
+  /*font-style:italic;*/
 }
-.tp-leftarrow.default,
-.tp-rightarrow.default {
-    z-index: 100;
-    cursor: pointer;
-    position: relative;
-    top: 50% !important;
-    -webkit-transition: all 200ms ease-in;
-    -o-transition: all 200ms ease-in;
-    -moz-transition: all 200ms ease-in;
-    background: rgba(0,0,0,0.2);
-    color: #f7f7f7;
-    line-height: 1;
-    font-size: 20px;
-    padding: 11px 18px;
-    width: auto;
-    height: auto;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
+@keyframes grow{
+  0% { transform:scale(1)}
+  50% { transform:scale(1.2)}
 }
-.tparrows:before {
-    font-family: 'FontAwesome';
-    font-style: normal;
-    font-weight: normal;
-    speak: none;
-    display: inline-block;
-    text-decoration: inherit;
-    text-align: center;
-}
-.tp-leftarrow.default:before {
-    content: '\f104'
-}
-.tp-rightarrow.default:before {
-    content: '\f105'
-}
-.tparrows:hover {
-    background: rgba(0,0,0,0.4)
-}
-.tp-bullets.simplebullets.round .bullet {
-    width: 12px;
-    height: 12px;
-    margin-left: 4px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    -webkit-transition: all 200ms ease-in;
-    -o-transition: all 200ms ease-in;
-    -moz-transition: all 200ms ease-in;
-    background: rgba(0,0,0,0.2);
-}
-.tp-bullets.simplebullets.round .bullet.selected,
-.tp-bullets.simplebullets.round .bullet:hover {
-    background: rgba(0,0,0,0.4)
-}
-.tp-bullets.hidebullets {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    -moz-opacity: 0;
-    -khtml-opacity: 0;
-    opacity: 0;
-}
-.tp-loader {
-    background: url(style/images/loading.gif) no-repeat;
-    background-color: #fff;
-    margin: -15px -15px;
-    top: 50%;
-    left: 50%;
-    z-index: 1000;
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background-size: 30px 30px;
-}
-@media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) { 
-	.tp-loader {
-	    background-image: url(style/images/loading%402x.gif)
-	}
-}
-.tp-bannertimer {
-    width: 100%;
-    height: 10px;
-    background: url(style/images/timer.png);
-    position: absolute;
-    z-index: 200;
-}
+
 /*-----------------------------------------------------------------------------------*/
 /*	SERVICES TABS   
 /*-----------------------------------------------------------------------------------*/
@@ -2456,125 +2389,7 @@ hr {
 .icon-overlay.icn-link a .icn-more:before {
     content: '\f0c1'; /*'\f517'*/
 }
-/*-----------------------------------------------------------------------------------*/
-/*	FANCYBOX    
-/*-----------------------------------------------------------------------------------*/
-#fancybox-thumbs ul li img {
-    max-width: none
-}
-.info.hidden {
-    display: none
-}
-.fancybox-wrap {
-    background: #FFF !important
-}
-.fancybox-title,
-.fancybox-error {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-    font-size: 14px !important;
-    line-height: 24px !important;
-}
-.fancybox-title h2,
-.fancybox-title h3 {
-    color: #616161;
-    margin-bottom: 10px;
-    line-height: 22px;
-    font-size: 18px;
-}
-.fancybox-skin {
-    color: #616161 !important
-}
-.fancybox-title-inside-wrap {
-    padding: 20px !important
-}
-.fancybox-nav span {
-    width: 36px !important;
-    height: 36px !important;
-    margin-top: -18px !important;
-}
-.fancybox-close {
-    top: 10px !important;
-    right: 10px !important;
-    width: 36px !important;
-    height: 36px !important;
-}
-.fancybox-close:before,
-.fancybox-prev span:before,
-.fancybox-next span:before {
-    font-family: 'FontAwesome';
-    font-style: normal;
-    font-weight: normal;
-    speak: none;
-    display: inline-block;
-    text-decoration: inherit;
-    margin-right: 0 !important;
-    margin-top: 6px !important;
-    text-align: center;
-    width: 36px !important;
-    font-size: 20px !important;
-}
-/* Firefox Fix */
-@-moz-document url-prefix() { 
-	.fancybox-close:before,
-	.fancybox-prev span:before,
-	.fancybox-next span:before {
-	    margin-top: 5px !important
-	}
-}
-.fancybox-close,
-.fancybox-prev span,
-.fancybox-next span {
-    background: rgba(0,0,0,0.5) !important;
-    color: #f7f7f7 !important;
-    text-align: center !important;
-    -webkit-transition: all 200ms ease-in !important;
-    -o-transition: all 200ms ease-in !important;
-    -moz-transition: all 200ms ease-in !important;
-    -webkit-border-radius: 3px !important;
-    border-radius: 3px !important;
-    opacity: 0;
-}
-.fancybox-close:hover,
-.fancybox-prev span:hover,
-.fancybox-next span:hover {
-    background: rgba(0,0,0,0.7) !important
-}
-.fancybox-wrap:hover .fancybox-close,
-.fancybox-wrap:hover .fancybox-prev span,
-.fancybox-wrap:hover .fancybox-next span {
-    opacity: 1
-}
-.fancybox-prev span:before {
-    content: '\f104'
-}
-.fancybox-next span:before {
-    content: '\f105'
-}
-.fancybox-close:before {
-    content: '\2715'
-}
-#fancybox-loading {
-    margin-top: -12px !important;
-    margin-left: -12px !important;
-    background: #000 !important;
-    padding: 8px;
-    opacity: 1 !important;
-    -webkit-border-radius: 3px !important;
-    border-radius: 3px !important;
-}
-#fancybox-loading div {
-    width: 24px !important;
-    height: 24px !important;
-    background-image: url(style/images/fancy-loading.gif) !important;
-}
-.fancybox-overlay {
-    background: rgba(27,27,27,0.94) !important
-}
-.fancybox-opened .fancybox-skin {
-    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.33);
-    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.33);
-    box-shadow: 0 0 5px rgba(0,0,0,0.33);
-}
+
 /*-----------------------------------------------------------------------------------*/
 /*	BLOG    
 /*-----------------------------------------------------------------------------------*/
