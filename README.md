@@ -69,8 +69,9 @@ Algori Blogger includes support for Infinite Scroll in Jetpack.
 * [jQuery FitVids 1.0.3](http://fitvidsjs.com/) , (C) 2013 Chris Coyier and Dave Rupert , [WTFPL](http://sam.zoy.org/wtfpl/)
 * [jQuery Isotope v1.5.26](http://isotope.metafizzy.co) , (C) 2014 Metafizzy, [MIT](https://opensource.org/licenses/MIT)
 * [jQuery Slick Forms](http://www.designchemical.com) , (C) 2011 Design Chemical, [MIT](https://opensource.org/licenses/MIT) and [GPL](http://www.gnu.org/licenses/gpl.html)
-* jQuery Sticky v1.0.0 http://labs.anthonygarand.com/sticky , (C) 2011 Anthony Garand, [MIT](https://opensource.org/licenses/MIT)
+* [jQuery Sticky v1.0.0](http://labs.anthonygarand.com/sticky) , (C) 2011 Anthony Garand, [MIT](https://opensource.org/licenses/MIT)
 * [Owl Carousel v2.2.1](https://owlcarousel2.github.io/OwlCarousel2/) , (C) 2013-2017 David Deutsch, [MIT](https://opensource.org/licenses/MIT)
 * [retina.js](https://github.com/strues/retinajs) , (C) Steven Truesdell, [MIT](https://opensource.org/licenses/MIT)
 * [Font Awesome icons](http://fontawesome.io) , (C) Dave Gandy, [Font: SIL OFL 1.1, CSS: MIT License](http://fontawesome.io/license)
 * [Default Header Image](https://stocksnap.io/photo/5AQ9OI606F) , (C) StockSnap.io Photographer: Toa Heftiba, [CC0 License](https://creativecommons.org/publicdomain/zero/1.0/)
+
