@@ -12,6 +12,8 @@ Requires at least: WP 4.5
 
 Algori Blogger is a WordPress Theme designed for Modern Personal Blogs.
 
+![Algori Blogger WordPress Theme](http://kevinbazira.com/images/articles/Algori%20Blogger%20WordPress%20Theme%20Documentation.jpg "Algori Blogger WordPress Theme")
+
 # Description 
 
 A Free Modern Personal Blog WordPress Theme with a clean and professional design that will be a great solution for sharing your creative vision, spreading your ideas, and creating a resource for others.
