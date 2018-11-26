@@ -77,3 +77,8 @@ Algori Blogger includes support for Infinite Scroll in Jetpack.
 * [Font Awesome icons](http://fontawesome.io) , (C) Dave Gandy, [Font: SIL OFL 1.1, CSS: MIT License](http://fontawesome.io/license)
 * [Default Header Image](https://stocksnap.io/photo/5AQ9OI606F) , (C) StockSnap.io Photographer: Toa Heftiba, [CC0 License](https://creativecommons.org/publicdomain/zero/1.0/)
 
+
+_If you like this project, please 🌟 star it here_ [![GitHub stars](https://img.shields.io/github/stars/kevinbazira/algori-blogger.svg?label=Stars&style=social)](https://github.com/kevinbazira/algori-blogger)
+<br/>
+_Follow me 👋 on Twitter for more projects like this_ [![Tweet to say Hi](https://img.shields.io/twitter/follow/kevinbazira.svg?style=social&label=Tweet%20@kevinbazira)](https://twitter.com/kevinbazira/)
+
