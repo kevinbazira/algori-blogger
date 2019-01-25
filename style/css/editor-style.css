@@ -33,12 +33,29 @@
 # MEDIA
 # CAPTIONS
 # GALLERIES
+# BLOCKS
 --------------------------------------------------------------*/
  
 /*-----------------------------------------------------------------------------------*/
 /*	GENERAL
 /*-----------------------------------------------------------------------------------*/
 
+/* Main Columns Width */
+.wp-block {
+	max-width: 720px;
+}
+
+/* Width of "wide" blocks */
+.wp-block[data-align="wide"] {
+	max-width: 1080px;
+}
+
+/* Width of "full-wide" blocks */
+.wp-block[data-align="full"] {
+	max-width: none;
+}
+
+/* Body */
 body {
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
@@ -58,7 +75,7 @@ body {
 body,
 li,
 address {
-    line-height: 25px
+    line-height: 1.8
 }
 input,
 button,
@@ -116,6 +133,13 @@ h5 {
 }
 h6 {
     font-size: 12px
+}
+.editor-post-title__input {
+	font-family: 'Raleway', sans-serif;
+	color: #616161;
+	font-weight: 800;
+	font-size: 22px;
+    line-height: 28px;
 }
 .page-title {
     min-height: 91px
@@ -266,7 +290,7 @@ footer .post-list li:first-child {
 }
 footer .post-list li h6 {
     font-size: 14px;
-    line-height: 25px;
+    line-height: 1.8;
     font-weight: normal;
     letter-spacing: normal;
     text-transform: none;
@@ -278,7 +302,7 @@ footer .post-list li em {
     font-style: normal;
 }
 .tagcloud {
-    line-height: 25px
+    line-height: 1.8
 }
 .color-wrapper {
     background: #3f8dbf
@@ -402,6 +426,7 @@ blockquote {
 blockquote p {
     font-size: 20px;
     line-height: 32px;
+    font-weight: 300;
 }
 blockquote small {
     color: #3f8dbf
@@ -2032,6 +2057,26 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	BLOCKS
+/*-----------------------------------------------------------------------------------*/
+
+/* Button Block */
+.wp-block-button__link,
+.wp-block-button__link-submit {
+	border-radius: 3px;
+}
+.is-style-squared .wp-block-button__link {
+	border-radius: inherit;
+}
+.wp-block-button__link:hover, 
+.wp-block-button__link:focus, 
+.wp-block-button__link:active, 
+.wp-block-button__link.active, 
+.parallax .wp-block-button__link-submit:hover {
+    filter: brightness(120%);
 }
 
 
