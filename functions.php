@@ -83,6 +83,21 @@ if ( ! function_exists( 'algori_blogger_setup' ) ) :
 		) );
 		
 		/**
+		 * Enable gutenberg block styles on the front-end.
+		 */
+		add_theme_support( 'wp-block-styles' );
+		
+		/**
+		 * Enable gutenberg wide alignment.
+		 */
+		add_theme_support( 'align-wide' );
+		
+		/**
+		 * Enable gutenberg responsive embeds.
+		 */
+		add_theme_support( 'responsive-embeds' );
+		
+		/**
 		 * Add custom link class navbar-brand to generated custom logo image link.
 		 */
 		 add_filter('get_custom_logo', 'algori_blogger_change_logo_class');
@@ -236,6 +251,8 @@ if ( ! function_exists( 'algori_blogger_setup' ) ) :
 		 * Implement editor styling, so as to make the TINYMCE editor content match the resulting post output in the theme, for a better user experience.
 		 */
 		add_editor_style(array('style/css/editor-style.css', 'http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900'));
+		add_theme_support( 'editor-styles' );
+		
 		
 	}
 endif;
@@ -330,6 +347,14 @@ function algori_blogger_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'algori_blogger_scripts' );
+
+/**
+ * Enqueue fonts for gutenberg.
+ */
+function algori_blogger_block_editor_fonts(){
+	wp_enqueue_style( 'algori-blogger-block-editor-fonts', 'http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900' );
+}
+add_action( 'enqueue_block_editor_assets', 'algori_blogger_block_editor_fonts' );
 
 /**
  * Implement the Custom Header feature.
