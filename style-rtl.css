@@ -79,7 +79,7 @@ figure {
     margin: 0;
     padding: 0;
 }
-figure img {
+.wp-post-image {
     width: 100%;
     height: auto;
 }
@@ -119,7 +119,7 @@ body {
 body,
 li,
 address {
-    line-height: 25px
+    line-height: 1.8
 }
 input,
 button,
@@ -327,7 +327,7 @@ footer .post-list li:first-child {
 }
 footer .post-list li h6 {
     font-size: 14px;
-    line-height: 25px;
+    line-height: 1.8;
     font-weight: normal;
     letter-spacing: normal;
     text-transform: none;
@@ -339,7 +339,7 @@ footer .post-list li em {
     font-style: normal;
 }
 .tagcloud {
-    line-height: 25px
+    line-height: 1.8
 }
 .color-wrapper {
     background: #3f8dbf
@@ -466,6 +466,13 @@ blockquote p {
 }
 blockquote small {
     color: #3f8dbf
+}
+.wp-block-quote,
+.wp-block-quote.is-large,
+.wp-block-quote.is-style-large,
+.wp-block-pullquote {
+	margin-top: 4rem;
+	margin-bottom: 4rem;
 }
 hr {
     border: 0;
@@ -3075,7 +3082,7 @@ a.more:after {
 }
 .sidebox .post-list h6 {
     font-size: 14px;
-    line-height: 25px;
+    line-height: 1.8;
     margin: 0;
     font-weight: normal;
     text-transform: none;
@@ -3237,7 +3244,7 @@ input[type="color"],
     padding: 0 10px;
     margin-bottom: 15px;
     font-size: 14px;
-    line-height: 25px;
+    line-height: 1.8;
     color: #7a7a7a;
     border: 1px solid #dadada;
     resize: none;
@@ -4610,4 +4617,37 @@ object {
 	.color-wrapper .container .footer-callout .footer-callout-btn {
 		text-align: right;
 	}
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	BLOCKS
+/*-----------------------------------------------------------------------------------*/
+
+/* Alignment */
+.alignwide {
+    max-width: calc(100vw - 3rem);
+    margin-right: -1.5rem;
+    margin-left: -1.5rem;
+}
+
+.alignfull {
+    max-width: 100vw;
+    margin-right: -2.5rem;
+    margin-left: -2.5rem;
+}
+
+/* Button Block */
+.wp-block-button__link,
+.wp-block-button__link-submit {
+	border-radius: 3px;
+}
+.is-style-squared .wp-block-button__link {
+	border-radius: inherit;
+}
+.wp-block-button__link:hover, 
+.wp-block-button__link:focus, 
+.wp-block-button__link:active, 
+.wp-block-button__link.active, 
+.parallax .wp-block-button__link-submit:hover {
+    filter: brightness(120%);
 }
