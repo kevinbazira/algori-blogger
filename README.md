@@ -4,9 +4,9 @@ Contributors: Kevin Bazira(http://kevinbazira.com)
 
 Tags: blog, two-columns, right-sidebar, custom-menu, custom-logo, featured-images, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 
-Requires at least: WP 4.5
-* Tested up to: WP 4.9
-* Stable tag: 1.0.8
+Requires at least: WP 4.9.6
+* Tested up to: WP 5.0
+* Stable tag: 1.0.9
 * License: GNU General Public License v2 or later
 * License URI: https://www.gnu.org/licenses/gpl-2.0.en.html
 
@@ -16,7 +16,7 @@ Algori Blogger is a WordPress Theme designed for Modern Personal Blogs.
 
 # Description 
 
-A Free Modern Personal Blog WordPress Theme with a clean and professional design that will be a great solution for sharing your creative vision, spreading your ideas, and creating a resource for others.
+A Gutenberg Ready Free Modern Personal Blog WordPress Theme with a clean and professional design that will be a great solution for sharing your creative vision, spreading your ideas, and creating a resource for others.
 
 # Installation
 
@@ -35,6 +35,14 @@ A Free Modern Personal Blog WordPress Theme with a clean and professional design
 Algori Blogger includes support for Infinite Scroll in Jetpack.
 
 # Changelog 
+
+= 1.0.9 - Jan 25 2019 =
+* Added theme support for Gutenberg to functions.php
+* Added front-end Gutenberg block styles to styles.css
+* Added back-end Gutenberg block styles to editor-styles.css
+* Changed line-height from 25px to 1.8 in both styles.css and editor-styles.css
+* Added copyright information in readme
+* Updated POT file in languages folder
 
 = 1.0.8 - April 28 2018 =
 * Added WP core-bundled jQuery
@@ -77,6 +85,9 @@ Algori Blogger includes support for Infinite Scroll in Jetpack.
 * [Font Awesome icons](http://fontawesome.io) , (C) Dave Gandy, [Font: SIL OFL 1.1, CSS: MIT License](http://fontawesome.io/license)
 * [Default Header Image](https://stocksnap.io/photo/5AQ9OI606F) , (C) StockSnap.io Photographer: Toa Heftiba, [CC0 License](https://creativecommons.org/publicdomain/zero/1.0/)
 
+
+Algori Blogger WordPress Theme, Copyright 2019 Kevin Bazira<br/>
+Algori Blogger is distributed under the terms of the GNU GPL<br/><br/>
 
 _If you like this project, please 🌟 star it here_ [![GitHub stars](https://img.shields.io/github/stars/kevinbazira/algori-blogger.svg?label=Stars&style=social)](https://github.com/kevinbazira/algori-blogger)
 <br/>
