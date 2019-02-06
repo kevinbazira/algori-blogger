@@ -8,21 +8,26 @@
  */
 
 get_header(); ?>
-
-	<div class="offset"></div>
-	<div id="primary" class="content-area">
 	
-		 <div class="dark-wrapper page-title">
-			<div class="container inner">
-			 
-			 <?php
-				 if ( have_posts() ) :
-					the_archive_title( '<h1>', '</h1>' );
-				 endif;
-			 ?>
-			
-			</div>
-		  </div>
+	<?php if(!is_front_page()): // Only show this if not on settings > front page?>
+	<div class="offset"></div>
+	<?php endif; ?>
+	
+	<div id="primary" class="content-area">
+		
+		<?php if(!is_front_page()): // Only show this if not on settings > front page?>
+			 <div class="dark-wrapper page-title">
+				<div class="container inner">
+				 
+				 <?php
+					 if ( have_posts() ) :
+						the_archive_title( '<h1>', '</h1>' );
+					 endif;
+				 ?>
+				
+				</div>
+			  </div>
+		<?php endif; ?>
 		  
 		 <div class="light-wrapper">
 			<div class="container inner">

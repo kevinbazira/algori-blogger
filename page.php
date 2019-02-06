@@ -14,9 +14,13 @@
 
 get_header(); ?>
 	
-	<div class="offset"></div>
+	<?php if(!is_front_page()): // Only show this if not on settings > front page?>
+		<div class="offset"></div>
+	<?php endif; ?>
+	
 	<div id="primary" class="content-area">
 	
+		<?php if(!is_front_page()): // Only show this if not on settings > front page?>
 		 <div class="dark-wrapper page-title">
 			<div class="container inner">
 			  
@@ -24,6 +28,7 @@ get_header(); ?>
 			  
 			</div>
 		  </div>
+		<?php endif; ?>
 		  
 		 <div class="light-wrapper">
 			<div class="container inner">
