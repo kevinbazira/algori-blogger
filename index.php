@@ -21,6 +21,17 @@ get_header(); ?>
 	?>
   
 	<div id="primary" class="content-area">
+	
+		<?php if(!is_front_page()): // Only show this if not on settings > front page?>
+			 <div class="dark-wrapper page-title">
+				<div class="container inner">
+				 
+				<h1> <?php single_post_title(); ?> </h1>
+				
+				</div>
+			  </div>
+		<?php endif; ?>
+		
 		<div class="light-wrapper">
 			<div class="container inner">
 				 <div class="row">
