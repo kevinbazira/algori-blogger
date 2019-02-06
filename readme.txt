@@ -1,11 +1,11 @@
 === Algori Blogger ===
 
 Contributors: Kevin Bazira
-Tags: blog, two-columns, right-sidebar, custom-menu, custom-logo, featured-images, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+Tags: blog, two-columns, right-sidebar, custom-header, custom-menu, custom-logo, editor-style, featured-images, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 
 Requires at least: WP 4.9.6
 Tested up to: WP 5.0
-Stable tag: 1.0.9
+Stable tag: 1.1.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.en.html
 
@@ -32,9 +32,15 @@ Algori Blogger includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 1.1.0 - Feb 06 2019 =
+* Updated style-rtl.css to match style.css
+* Added index.php page-title wrapper to show on !is_front_page()
+* Fixed page.php and archive.php page-title wrapper to show on !is_front_page()
+* Updated POT file in languages folder
+
 = 1.0.9 - Jan 25 2019 =
 * Added theme support for Gutenberg to functions.php
-* Added front-end Gutenberg block styles to styles.css
+* Added front-end Gutenberg block styles to styles.css and style-rtl.css
 * Added back-end Gutenberg block styles to editor-styles.css
 * Changed line-height from 25px to 1.8 in both styles.css and editor-styles.css
 * Added copyright information in readme
