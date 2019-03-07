@@ -28,8 +28,11 @@ get_header(); ?>
 		<div class="light-wrapper">
 			<div class="container inner">
 			  <div class="row">
-				<main id="main" class="site-main col-sm-8 content">
-					<div class="classic-blog">
+			  
+				<?php get_sidebar( 'left' ); ?>
+			  
+					<main id="main" class="site-main col-sm-8 content">
+						<div class="classic-blog">
 							<?php
 							if ( have_posts() ) : ?>
 
@@ -55,11 +58,8 @@ get_header(); ?>
 							endif; ?>
 						</div><!-- .classic-blog -->
 					</main><!-- #main -->
-				
-				
+					
 				<?php get_sidebar(); ?>
-				<!-- /col-sm-4 .sidebar --> 
-				
 				
 			  </div>
 			  <!-- /.row --> 

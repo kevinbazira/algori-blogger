@@ -33,6 +33,10 @@ get_header(); ?>
 		 <div class="light-wrapper">
 			<div class="container inner">
 			  <div class="row">
+			  
+				<?php get_sidebar( 'left' ); ?>
+			  
+			  
 				<main id="main" class="site-main col-sm-8 content">
 				  <div class="classic-blog">
 				  
@@ -54,7 +58,6 @@ get_header(); ?>
 				
 				
 				<?php get_sidebar(); ?>
-				<!-- /col-sm-4 .sidebar --> 
 				
 				
 			  </div>
