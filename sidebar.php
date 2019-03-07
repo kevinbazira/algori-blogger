@@ -11,13 +11,13 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ):
 ?>
 
 	<aside id="secondary" class="widget-area col-sm-2 sidebar">
-	</aside><!-- #secondary -->
+	</aside><!--  #secondary -->
 
 <?php else: ?>
 
 	<aside id="secondary" class="widget-area col-sm-4 sidebar">
 		<?php dynamic_sidebar( 'sidebar-1' ); ?>
-	</aside><!-- #secondary -->
+	</aside><!--  #secondary -->
 	
 <?php endif; ?>
 	
