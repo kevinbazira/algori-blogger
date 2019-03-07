@@ -4,8 +4,8 @@ Contributors: Kevin Bazira
 Tags: blog, two-columns, right-sidebar, custom-header, custom-menu, custom-logo, editor-style, featured-images, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 
 Requires at least: WP 4.9.6
-Tested up to: WP 5.0
-Stable tag: 1.1.0
+Tested up to: WP 5.1
+Stable tag: 1.1.1
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.en.html
 
@@ -28,9 +28,16 @@ A Gutenberg Ready Free Modern Personal Blog WordPress Theme with a clean and pro
 
 = Does this theme support any plugins? =
 
-Algori Blogger includes support for Infinite Scroll in Jetpack.
+Algori Blogger includes support for the following plugins;
+1. Infinite Scroll in Jetpack
+2. Gutenberg plugin
 
 == Changelog ==
+
+= 1.1.1 - Mar 07 2019 =
+* Added support for centered content when sidebar is empty especially in Gutenberg
+* Added mobile support for hero title and description
+* Updated POT file in languages folder
 
 = 1.1.0 - Feb 06 2019 =
 * Updated style-rtl.css to match style.css
