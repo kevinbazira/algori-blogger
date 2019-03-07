@@ -5,7 +5,7 @@ Theme URI: https://github.com/kevinbazira/algori-blogger
 Author: Kevin Bazira  
 Author URI: http://kevinbazira.com/
 Description: A Gutenberg Ready Free Modern Personal Blog WordPress Theme with a clean and professional design that will be a great solution for sharing your creative vision, spreading your ideas, and creating a resource for others.
-Version: 1.0.9
+Version: 1.1.1
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.en.html
 Text Domain: algori-blogger
@@ -1671,6 +1671,19 @@ hr {
 @keyframes grow{
   0% { transform:scale(1)}
   50% { transform:scale(1.2)}
+}
+
+
+@media all and (max-width: 480px) { 
+	.hero-description {
+		display: none;
+	}
+}
+@media all and (max-width: 330px) { 
+	.hero-title,
+	.hero-description {
+		display: none;
+	}
 }
 
 /*-----------------------------------------------------------------------------------*/

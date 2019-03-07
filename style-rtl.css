@@ -1669,6 +1669,19 @@ hr {
   50% { transform:scale(1.2)}
 }
 
+
+@media all and (max-width: 480px) { 
+	.hero-description {
+		display: none;
+	}
+}
+@media all and (max-width: 330px) { 
+	.hero-title,
+	.hero-description {
+		display: none;
+	}
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*	SERVICES TABS   
 /*-----------------------------------------------------------------------------------*/
