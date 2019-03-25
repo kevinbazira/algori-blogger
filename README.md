@@ -6,9 +6,9 @@ Tags: blog, two-columns, right-sidebar, custom-header, custom-menu, custom-logo,
 
 Requires at least: WP 4.9.6
 * Tested up to: WP 5.1
-* Stable tag: 1.1.1
-* License: GNU General Public License v2 or later
-* License URI: https://www.gnu.org/licenses/gpl-2.0.en.html
+* Stable tag: 1.1.2
+License: GNU General Public License v3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
 Algori Blogger is a WordPress Theme designed for Modern Personal Blogs.
 
@@ -37,6 +37,15 @@ Algori Blogger includes support for the following plugins;
 * Gutenberg plugin
 
 # Changelog 
+
+= 1.1.2 - Mar 25 2019 =
+* Removed $ manipulation and added 'jquery' in the dependencies param for all scripts that need jQuery
+* Fixed all the added scripts to use jQuery instead of $ since WP Core jQuery is old and uses 'jquery' instead of '$'
+* Updated escaping functions to avoid double escaping html elements
+* Removed support for iframes from owl.carousel.js to be compliant with WordPress theme requirements
+* Removed theme-slug prefixes from third party assets to avoid plugins from loading the same script leading to improved performance
+* Changed theme license from GPLv2 to GPLv3 to support isotope
+* Updated POT file in languages folder
 
 = 1.1.1 - Mar 07 2019 =
 * Added support for centered content when sidebar is empty especially in Gutenberg
