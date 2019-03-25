@@ -30,13 +30,12 @@
 				<p class="pull-right">
 					<?php
 						/* translators: %s: Proudly powered by . */
-						printf( esc_html__( ' %s', 'algori-blogger' ), 'Proudly powered by' );
+						printf( ' %s', esc_html__( 'Proudly powered by', 'algori-blogger' ) );
 					?>
 					
 					<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'algori-blogger' ) ); ?>"><u><?php
 						/* translators: %s: CMS name, i.e. WordPress. */
-						printf( esc_html__( ' %s', 'algori-blogger' ), 'WordPress' );
-						//printf ( esc_html_e( 'WordPress', 'algori-blogger' ) )
+						printf( ' %s', esc_html__( 'WordPress', 'algori-blogger' ) );
 					?></u></a>
 					
 					<span class="sep"> | </span>

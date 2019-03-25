@@ -78,8 +78,8 @@
 			if ( $description || is_customize_preview() ):?>
 			
 			<p class="hero-description" >
-				<?php /* translators: %s: Site Description */
-					printf( esc_html__(' %s', 'algori-blogger'), esc_attr($description) ); 
+				<?php /* Site Description */
+					echo esc_html( $description ); 
 				?>
 			</p>
 			<?php else:?>
