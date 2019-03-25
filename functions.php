@@ -146,12 +146,12 @@ if ( ! function_exists( 'algori_blogger_setup' ) ) :
 						  <div class="image-caption">
 							<div class="info">
 							  <h2>';
-								/* translators: %s: Comment Author */
-								printf( esc_html__(' %s', 'algori-blogger'), get_comment_author_link());
+								/* Comment Author */
+								comment_author_link();
 						 echo'</h2>
 							  <div class="meta">
-									<div class="date">';/* translators: %s: Comment Date */
-							 echo ' <a class="comment-permalink" href="' . esc_html( get_comment_link( $comment->comment_ID ) ) . '">'; printf( esc_html__(' %1$s', 'algori-blogger'), get_comment_date( 'j F Y' ), get_comment_time() ); echo '</a>';
+									<div class="date">';/* Comment Date */
+							 echo ' <a class="comment-permalink" href="' . esc_html( get_comment_link( $comment->comment_ID ) ) . '">'; comment_date( 'j F Y' ); echo '</a>';
 							 echo ' </div>
 									&nbsp;&nbsp; | &nbsp;&nbsp;'; 
 									 comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth'])));
@@ -294,11 +294,11 @@ add_action( 'widgets_init', 'algori_blogger_widgets_init' );
 function algori_blogger_scripts() {
 
 	// Add CSS
-	wp_enqueue_style( 'algori-blogger-bootstrap', get_template_directory_uri() . '/style/css/bootstrap.css', array(), '20180131', 'all' );
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/style/css/bootstrap.css', array(), '20180131', 'all' );
 
-	wp_enqueue_style( 'algori-blogger-owl-carousel', get_template_directory_uri() . '/style/css/owl.carousel.css', array(), '20180131', 'all' );
+	wp_enqueue_style( 'owl-carousel', get_template_directory_uri() . '/style/css/owl.carousel.css', array(), '20180131', 'all' );
 
-	wp_enqueue_style( 'algori-blogger-prettify', get_template_directory_uri() . '/style/js/google-code-prettify/prettify.css', array(), '20180131', 'all' );
+	wp_enqueue_style( 'prettify', get_template_directory_uri() . '/style/js/google-code-prettify/prettify.css', array(), '20180131', 'all' );
 
 	wp_enqueue_style( 'algori-blogger-style', get_stylesheet_uri() );
 	
@@ -309,34 +309,30 @@ function algori_blogger_scripts() {
 	// Add Fonts
 	wp_enqueue_style( 'algori-blogger-google-fonts', 'http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900' );
 	
-	wp_enqueue_style( 'algori-font-awesome-fonts', get_template_directory_uri() . '/style/css/font-awesome.css', array(), '20180131', 'all' );
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/style/css/font-awesome.css', array(), '20180131', 'all' );
 	
 	//Add JavaScript
-	wp_enqueue_script( 'jquery'); // load WP core-bundled jQuery
-	
-	wp_add_inline_script( 'jquery-core', '$ = jQuery;' );  // avoid '$ and jquery' conflict caused by WP core-bundled jQuery since it's old it uses 'jquery' yet algori-blogger scripts below use '$'
-	
-	wp_enqueue_script( 'algori-blogger-bootstrap-min', get_template_directory_uri() . '/style/js/bootstrap.min.js', array(), '20180131', true );
+	wp_enqueue_script( 'bootstrap-min', get_template_directory_uri() . '/style/js/bootstrap.min.js', array(), '20180131', true );
 
-	wp_enqueue_script( 'algori-blogger-twitter-bootstrap-hover-dropdown-min', get_template_directory_uri() . '/style/js/bootstrap-hover-dropdown.min.js', array(), '20180131', true );
+	wp_enqueue_script( 'bootstrap-hover-dropdown-min', get_template_directory_uri() . '/style/js/bootstrap-hover-dropdown.min.js', array(), '20180131', true );
 	
-	wp_enqueue_script( 'algori-blogger-isotope-min', get_template_directory_uri() . '/style/js/jquery.isotope.min.js', array(), '20180131', true );
+	wp_enqueue_script( 'isotope-min', get_template_directory_uri() . '/style/js/jquery.isotope.min.js', array(), '20180131', true );
 	
-	wp_enqueue_script( 'algori-blogger-jquery-easytabs-min', get_template_directory_uri() . '/style/js/jquery.easytabs.min.js', array(), '20180131', true );
+	wp_enqueue_script( 'jquery-easytabs-min', get_template_directory_uri() . '/style/js/jquery.easytabs.min.js', array(), '20180131', true );
 	
-	wp_enqueue_script( 'algori-blogger-owl-carousel-min', get_template_directory_uri() . '/style/js/owl.carousel.min.js', array(), '20180131', true );
+	wp_enqueue_script( 'owl-carousel-min', get_template_directory_uri() . '/style/js/owl.carousel.min.js', array(), '20180131', true );
 	
-	wp_enqueue_script( 'algori-blogger-jquery-fitvids', get_template_directory_uri() . '/style/js/jquery.fitvids.js', array(), '20180131', true );
+	wp_enqueue_script( 'jquery-fitvids', get_template_directory_uri() . '/style/js/jquery.fitvids.js', array(), '20180131', true );
 	
-	wp_enqueue_script( 'algori-blogger-jquery-sticky', get_template_directory_uri() . '/style/js/jquery.sticky.js', array(), '20180131', true );
+	wp_enqueue_script( 'jquery-sticky', get_template_directory_uri() . '/style/js/jquery.sticky.js', array(), '20180131', true );
 	
-	wp_enqueue_script( 'algori-blogger-prettify', get_template_directory_uri() . '/style/js/google-code-prettify/prettify.min.js', array(), '20180131', true );
+	wp_enqueue_script( 'prettify', get_template_directory_uri() . '/style/js/google-code-prettify/prettify.min.js', array(), '20180131', true );
 	
-	wp_enqueue_script( 'algori-blogger-jquery-slickforms', get_template_directory_uri() . '/style/js/jquery.slickforms.js', array(), '20180131', true );
+	wp_enqueue_script( 'jquery-slickforms', get_template_directory_uri() . '/style/js/jquery.slickforms.js', array(), '20180131', true );
 	
-	wp_enqueue_script( 'algori-blogger-retina', get_template_directory_uri() . '/style/js/retina.js', array(), '20180131', true );
+	wp_enqueue_script( 'retina', get_template_directory_uri() . '/style/js/retina.js', array(), '20180131', true );
 	
-	wp_enqueue_script( 'algori-blogger-scripts', get_template_directory_uri() . '/style/js/scripts.js', array(), '20180427', true );
+	wp_enqueue_script( 'algori-blogger-scripts', get_template_directory_uri() . '/style/js/scripts.js', array( 'jquery' ), '20190325', true );
 
 	wp_enqueue_script( 'algori-blogger-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
