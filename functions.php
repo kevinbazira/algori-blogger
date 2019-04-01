@@ -151,13 +151,15 @@ if ( ! function_exists( 'algori_blogger_setup' ) ) :
 						 echo'</h2>
 							  <div class="meta">
 									<div class="date">';/* Comment Date */
-							 echo ' <a class="comment-permalink" href="' . esc_html( get_comment_link( $comment->comment_ID ) ) . '">'; comment_date( 'j F Y' ); echo '</a>';
+							 echo ' <a class="comment-permalink" href="' . esc_url( get_comment_link( $comment->comment_ID ) ) . '">'; comment_date( 'j F Y' ); echo '</a>';
 							 echo ' </div>
 									&nbsp;&nbsp; | &nbsp;&nbsp;'; 
 									 comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth'])));
 						echo '</div>
 							</div>';
-							echo esc_html(($comment->comment_approved == '0')? 'Your comment is awaiting moderation.': comment_text());
+							/* Comment Message */
+							$comment_message = __( 'Your comment is awaiting moderation.', 'algori-blogger' );
+							echo esc_html(($comment->comment_approved == '0')? $comment_message : comment_text());
 						echo '</div>
 						</div>';
                 
@@ -204,13 +206,15 @@ if ( ! function_exists( 'algori_blogger_setup' ) ) :
 			
 			if($previous_link = get_previous_post()){ // Display previous post link if it exists
 				echo '<div class="navigation pull-left">';
-					previous_post_link('%link', 'Previous', 'no');
+					$previous_btn_title =  __( 'Previous', 'algori-blogger' );
+					previous_post_link('%link', $previous_btn_title, 'no');
 				echo '</div>';
 			}
 			
 			if($next_link = get_next_post()){ // Display next post link if it exists
 				echo '<div class="navigation pull-right">';
-					next_post_link('%link', 'Next', 'no');
+					$next_btn_title =  __( 'Next', 'algori-blogger' );
+					next_post_link('%link', $next_btn_title, 'no');
 				echo '</div>';
 			}
 			
@@ -312,15 +316,15 @@ function algori_blogger_scripts() {
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/style/css/font-awesome.css', array(), '20180131', 'all' );
 	
 	//Add JavaScript
-	wp_enqueue_script( 'bootstrap-min', get_template_directory_uri() . '/style/js/bootstrap.min.js', array(), '20180131', true );
+	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/style/js/bootstrap.min.js', array(), '20180131', true );
 
-	wp_enqueue_script( 'bootstrap-hover-dropdown-min', get_template_directory_uri() . '/style/js/bootstrap-hover-dropdown.min.js', array(), '20180131', true );
+	wp_enqueue_script( 'bootstrap-hover-dropdown', get_template_directory_uri() . '/style/js/bootstrap-hover-dropdown.min.js', array(), '20180131', true );
 	
-	wp_enqueue_script( 'isotope-min', get_template_directory_uri() . '/style/js/jquery.isotope.min.js', array(), '20180131', true );
+	wp_enqueue_script( 'isotope', get_template_directory_uri() . '/style/js/jquery.isotope.min.js', array(), '20180131', true );
 	
-	wp_enqueue_script( 'jquery-easytabs-min', get_template_directory_uri() . '/style/js/jquery.easytabs.min.js', array(), '20180131', true );
+	wp_enqueue_script( 'jquery-easytabs', get_template_directory_uri() . '/style/js/jquery.easytabs.min.js', array(), '20180131', true );
 	
-	wp_enqueue_script( 'owl-carousel-min', get_template_directory_uri() . '/style/js/owl.carousel.min.js', array(), '20180131', true );
+	wp_enqueue_script( 'owl-carousel', get_template_directory_uri() . '/style/js/owl.carousel.min.js', array(), '20180131', true );
 	
 	wp_enqueue_script( 'jquery-fitvids', get_template_directory_uri() . '/style/js/jquery.fitvids.js', array(), '20180131', true );
 	
@@ -383,7 +387,12 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Customize Algori Blogger elipsis at the end of excerpts from " [...]" to just "..." .
  */
  function algori_blogger_excerpt_more() {
-	 return " ...";
+	 
+	if ( is_admin() ) { // avoid affecting admin dashboard
+		return $more;
+	}
+	return ' &hellip;';
+	 
  }
  add_filter('excerpt_more', 'algori_blogger_excerpt_more');
 
@@ -447,7 +456,7 @@ class Algori_Blogger_Walker_Nav_Primary extends Walker_Nav_menu {
 		$attributes = ! empty( $item->attr_title ) ? ' title="' . esc_attr($item->attr_title) . '"' : '';
 		$attributes .= ! empty( $item->target ) ? ' target="' . esc_attr($item->target) . '"' : '';
 		$attributes .= ! empty( $item->xfn ) ? ' rel="' . esc_attr($item->xfn) . '"' : '';
-		$attributes .= ! empty( $item->url ) ? ' href="' . esc_attr($item->url) . '"' : '';
+		$attributes .= ! empty( $item->url ) ? ' href="' . esc_url($item->url) . '"' : '';
 		
 		
 		$attributes .= ( $args->walker->has_children ) ? ' class="dropdown-toggle js-activated" ' : '';
