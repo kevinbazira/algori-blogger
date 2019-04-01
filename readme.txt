@@ -5,7 +5,7 @@ Tags: blog, two-columns, right-sidebar, custom-header, custom-menu, custom-logo,
 
 Requires at least: WP 4.9.6
 Tested up to: WP 5.1
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -33,6 +33,14 @@ Algori Blogger includes support for the following plugins;
 2. Gutenberg plugin
 
 == Changelog ==
+
+= 1.1.3 - Apr 01 2019 =
+* Added static text translation that was missing on comment_message, previous_btn_title and next_btn_title
+* Removed '-min' extension from wp_enqueue_script handlers
+* Removed unused functions from template-tags.php
+* Fixed anchor tag url ecaping from esc_html() to esc_url()
+* Added admin check to avoid affecting admin dashboard 'excerpt_more'
+* Updated POT file in languages folder
 
 = 1.1.2 - Mar 25 2019 =
 * Removed $ manipulation and added 'jquery' in the dependencies param for all scripts that need jQuery
