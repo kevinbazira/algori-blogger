@@ -5,7 +5,7 @@ Tags: blog, two-columns, right-sidebar, custom-header, custom-menu, custom-logo,
 
 Requires at least: WP 4.9.6
 Tested up to: WP 5.1
-Stable tag: 1.1.3
+Stable tag: 1.1.4
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -33,6 +33,11 @@ Algori Blogger includes support for the following plugins;
 2. Gutenberg plugin
 
 == Changelog ==
+
+= 1.1.4 - Apr 15 2019 =
+* Added Algori Blogger documentation link to the customizer
+* Added customizer css for custom controls like the algori-blogger-documentation-link 
+* Updated POT file in languages folder
 
 = 1.1.3 - Apr 01 2019 =
 * Added static text translation that was missing on comment_message, previous_btn_title and next_btn_title
