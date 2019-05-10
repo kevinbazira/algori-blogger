@@ -1,12 +1,12 @@
 # Algori Blogger 
 
-Contributors: Kevin Bazira(http://kevinbazira.com)
+Contributors: [Kevin Bazira](http://kevinbazira.com)
 
 Tags: blog, two-columns, right-sidebar, custom-header, custom-menu, custom-logo, editor-style, featured-images, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 
 Requires at least: WP 4.9.6
 * Tested up to: WP 5.1
-* Stable tag: 1.1.4
+* Stable tag: 1.1.5
 * License: GNU General Public License v3 or later
 * License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -37,6 +37,9 @@ Algori Blogger includes support for the following plugins;
 * Gutenberg plugin
 
 # Changelog 
+
+= 1.1.5 - May 10 2019 =
+* Fixed readme.txt issues and passed WordPress Readme Validator
 
 = 1.1.4 - Apr 15 2019 =
 * Added Algori Blogger documentation link to the customizer
