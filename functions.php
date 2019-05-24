@@ -384,6 +384,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 /**
+ * Load recommended plugins with TGMPA.
+ */
+require get_parent_theme_file_path( '/inc/recommended-plugins.php' );
+
+/**
  * Customize Algori Blogger elipsis at the end of excerpts from " [...]" to just "..." .
  */
  function algori_blogger_excerpt_more() {
