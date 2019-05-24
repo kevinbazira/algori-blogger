@@ -4,7 +4,7 @@ Tags: blog, two-columns, right-sidebar, custom-header, custom-menu, custom-logo,
 Requires at least: WP 4.9.6
 Tested up to: WP 5.1
 Requires PHP: 5.6.0
-Stable tag: 1.1.5
+Stable tag: 1.1.6
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -32,6 +32,10 @@ Algori Blogger includes support for the following plugins;
 2. Gutenberg plugin
 
 == Changelog ==
+
+= 1.1.6 - May 24 2019 =
+* Added recommended plugins using the TGMPA library
+* Updated POT file in languages folder
 
 = 1.1.5 - May 10 2019 =
 * Fixed readme.txt issues and passed WordPress Readme Validator
