@@ -5,7 +5,7 @@ Theme URI: https://github.com/kevinbazira/algori-blogger
 Author: Kevin Bazira  
 Author URI: http://kevinbazira.com/
 Description: A Gutenberg Ready Free Modern Personal Blog WordPress Theme with a clean and professional design that will be a great solution for sharing your creative vision, spreading your ideas, and creating a resource for others.
-Version: 1.1.6
+Version: 1.1.7
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 Text Domain: algori-blogger
@@ -1613,10 +1613,15 @@ hr {
   position:relative;
   overflow:hidden;
   display:flex;
+  display: -webkit-flex;
   flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
   justify-content: center;
+  -webkit-justify-content: center;
   align-items: flex-start;
   align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-align-content: flex-start;
   height:50vw;
   min-height:400px;
   max-height:550px;
@@ -1624,7 +1629,6 @@ hr {
   color:#eee;
 }
 .hero-media img{
-  content:"";
   width:100%;
   /*height:100%;*/
   position:absolute;
@@ -1637,9 +1641,31 @@ hr {
   background-size:cover;
   background-attachment:fixed;
   animation: grow 60s  linear 10ms infinite;
+  -webkit-animation-duration: 60s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: 10ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+  -webkit-animation-fill-mode: none;
+  -webkit-animation-play-state: running;
+  -webkit-animation-name: grow;
   transition:all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;  
   z-index:-2
 }
+
+@keyframes grow{
+  0% { transform:scale(1)}
+  50% { transform:scale(1.2)}
+  100% { transform:scale(1)}
+}
+
+@-webkit-keyframes grow{
+  0% { -webkit-transform:scale(1)}
+  50% { -webkit-transform:scale(1.2)}
+  100% { -webkit-transform:scale(1)}
+}
+
 .header-hero a{
   color:#eee
 }
@@ -1667,10 +1693,6 @@ hr {
 }
 .hero-btn{
   /*font-style:italic;*/
-}
-@keyframes grow{
-  0% { transform:scale(1)}
-  50% { transform:scale(1.2)}
 }
 
 
