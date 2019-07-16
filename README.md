@@ -6,7 +6,7 @@ Tags: blog, two-columns, right-sidebar, custom-header, custom-menu, custom-logo,
 
 Requires at least: WP 4.9.6
 * Tested up to: WP 5.1
-* Stable tag: 1.1.7
+* Stable tag: 1.1.8
 * License: GNU General Public License v3 or later
 * License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -37,6 +37,9 @@ Algori Blogger includes support for the following plugins;
 * Gutenberg plugin
 
 # Changelog 
+
+= 1.1.8 - Jul 16 2019 =
+* Removed big white space below Header Image for both tablets and mobile screens
 
 = 1.1.7 - June 26 2019 =
 * Fixed Header Image CSS animation for older Safari browsers
@@ -137,7 +140,7 @@ Algori Blogger includes support for the following plugins;
 Algori Blogger WordPress Theme, Copyright 2019 Kevin Bazira<br/>
 Algori Blogger is distributed under the terms of the GNU GPL<br/><br/>
 
-_If you like this project, please 🌟 star it here_ [![GitHub stars](https://img.shields.io/github/stars/kevinbazira/algori-blogger.svg?label=Stars&style=social)](https://github.com/kevinbazira/algori-blogger)
+_If you like this project,  please 🌟 star it here_ [![GitHub stars](https://img.shields.io/github/stars/kevinbazira/algori-blogger.svg?label=Stars&style=social)](https://github.com/kevinbazira/algori-blogger)
 <br/>
 _Follow me 👋 on Twitter for more projects like this_ [![Tweet to say Hi](https://img.shields.io/twitter/follow/kevinbazira.svg?style=social&label=Tweet%20@kevinbazira)](https://twitter.com/kevinbazira/)
 

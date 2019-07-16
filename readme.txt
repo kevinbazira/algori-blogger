@@ -4,7 +4,7 @@ Tags: blog, two-columns, right-sidebar, custom-header, custom-menu, custom-logo,
 Requires at least: WP 4.9.6
 Tested up to: WP 5.1
 Requires PHP: 5.6.0
-Stable tag: 1.1.7
+Stable tag: 1.1.8
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -32,6 +32,9 @@ Algori Blogger includes support for the following plugins;
 2. Gutenberg plugin
 
 == Changelog ==
+
+= 1.1.8 - Jul 16 2019 =
+* Removed big white space below Header Image for both tablets and mobile screens
 
 = 1.1.7 - June 26 2019 =
 * Fixed Header Image CSS animation for older Safari browsers
