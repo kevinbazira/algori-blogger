@@ -1690,8 +1690,14 @@ hr {
 .hero-btn{
   /*font-style:italic;*/
 }
-
-
+@media all and (max-width: 768px) { 
+	.header-hero {
+		min-height: 0px;
+	}
+	.hero-info {
+		padding: 10% 10% 0% 10%;
+	}
+}
 @media all and (max-width: 480px) { 
 	.hero-description {
 		display: none;
